@@ -1,7 +1,12 @@
 #include "randExt.h"
 #include <math.h>
 
-double gauss_rand()
+/*Takes parameters sigma and mu
+ *generates a Gaussian R.V. with
+ *StdDev = sigma
+ *Mean = mu
+*/
+double gauss_rand(double sigma, double mu)
 {
 	static double V1, V2, S;
 	static int phase = 0;
@@ -23,5 +28,5 @@ double gauss_rand()
 
 	phase = 1 - phase;
 
-	return X;
+	return X*sigma + mu;
 }

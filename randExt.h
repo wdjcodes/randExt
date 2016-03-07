@@ -3,4 +3,4 @@
 
 #include <stdlib.h>
 
-double gauss_rand();
+double gauss_rand(double, double);
